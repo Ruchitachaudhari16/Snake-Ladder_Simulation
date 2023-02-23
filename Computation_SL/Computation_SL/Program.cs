@@ -3,13 +3,12 @@
     internal class Program
     {
         static void Main(string[] args)
-        { // snake & ladder game played with single player at start position 0
-    
-            int player_Position=0;
-         
-           Console.WriteLine("Welcome to Snake & Ladder game");
-            Console.WriteLine("start position of Player one is :" + player_Position);
-            
+        { //The player rolls the die to get the number between 1 to 6
+
+            int Dice_rolled;
+         Random random= new Random();
+            Dice_rolled=random.Next(1,7);
+            Console.WriteLine("Number get after Dice rolled:" + Dice_rolled);
             Console.ReadLine();
         }
     }
