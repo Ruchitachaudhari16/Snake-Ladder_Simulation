@@ -6,7 +6,7 @@ namespace Computation_SL
     {
         static void Main(string[] args)
         {
-            // Repeat till the Player reaches the winning position 100.
+            //Ensure the player getsto exact winning position 100.
 
             const int Snake = 0;
             const int Ladder = 1;
@@ -16,6 +16,7 @@ namespace Computation_SL
             int diceRolled = random.Next(1, 7);
             Console.WriteLine("Rolled Dice number is:" + diceRolled);
             int choice = random.Next(0, 3);
+
 
             switch (choice)
             {
@@ -38,11 +39,9 @@ namespace Computation_SL
                     break;
                 case NoGame:
                     Console.WriteLine("Its a NoGame");
+                    Console.ReadLine();
                     Console.WriteLine("Player 1 position : " + position);
                     break;
-
-
-                    Console.ReadLine();
             }
         }
     }
