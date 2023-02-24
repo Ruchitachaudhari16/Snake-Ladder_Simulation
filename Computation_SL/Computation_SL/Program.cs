@@ -1,24 +1,26 @@
-﻿namespace Computation_SL
+﻿using System.Numerics;
+
+namespace Computation_SL
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //The player then checks for the option,They are no play,Snake or Ladder.
+            // Repeat till the Player reaches the winning position 100.
 
             const int Snake = 0;
             const int Ladder = 1;
             const int NoGame = 2;
             int position = 0;
             Random random = new Random();
-            int diceRoll = random.Next(1, 7);
-            Console.WriteLine("Rolled Dice number is:" + diceRoll);
+            int diceRolled = random.Next(1, 7);
+            Console.WriteLine("Rolled Dice number is:" + diceRolled);
             int choice = random.Next(0, 3);
 
             switch (choice)
             {
                 case Snake:
-                    position -= diceRoll;
+                    position -= diceRolled;
                     Console.WriteLine("Its a snake");
                     if (position < 0)
                     {
@@ -30,7 +32,7 @@
                     }
                     break;
                 case Ladder:
-                    position += diceRoll;
+                    position += diceRolled;
                     Console.WriteLine("Its a ladder");
                     Console.WriteLine("Player 1 position : " + position);
                     break;
@@ -39,8 +41,9 @@
                     Console.WriteLine("Player 1 position : " + position);
                     break;
 
+
+                    Console.ReadLine();
             }
-            Console.ReadLine();
         }
     }
 }
